@@ -1,0 +1,95 @@
+﻿@page "/reino-animal"
+
+@rendermode InteractiveServer
+
+<style>
+
+	.estilo-area-cadastro-animal {
+		width: 50%;
+		border-radius: 5px;
+		background-color: black;
+		padding: 10px;
+		margin-bottom: 10px;
+	}
+
+	#container-cadastro-animal {
+		display: flex;
+	}
+
+	#area-cadastro-animal {
+		margin-right: 30px;
+	}
+
+</style>
+
+<h1 class="text-primary text-center">@temaPrincipal</h1>
+<hr />
+
+<h2 class="text-secondary">@Mensagem_</h2>
+
+<EditForm Model="animal" OnValidSubmit="Sucesso_Ao_Cadastrar_Animal" OnInvalidSubmit="Falha_Ao_Cadastrar_Animal">
+
+	<DataAnnotationsValidator></DataAnnotationsValidator>
+
+	<div id="container-cadastro-animal">
+
+		<div id="area-cadastro-animal" class="estilo-area-cadastro-animal mb-5">
+
+			<ValidationMessage For="@(()=>animal.nome_Animal)"></ValidationMessage>
+			<label class="text-muted">Nome animal</label>
+			<InputText typeof="text" @bind-Value=animal.nome_Animal class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>animal.especie_Animal)"></ValidationMessage>
+			<label class="text-muted">Espécie animal</label>
+			<InputText typeof="text" @bind-Value=animal.especie_Animal class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>animal.sexo_Animal)"></ValidationMessage>
+			<label class="text-muted">Sexo animal</label>
+			<InputText typeof="text" @bind-Value=animal.sexo_Animal class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>animal.idade_Animal)"></ValidationMessage>
+			<label class="text-muted">Idade animal</label>
+			<InputNumber TValue="int" @bind-Value=animal.idade_Animal @onkeypress=Sucesso_Ao_Cadastrar_Animal class="d-block mb-3 form-control text-center"></InputNumber>
+
+			<button id="botao-cadastrar-animal" type="submit" class="btn btn-primary">Cadastrar animal</button>
+
+		</div>
+
+		<div id="area-descricao" class="estilo-area-cadastro-animal mb-5">
+			<InputTextArea id="text-area" typeof="text" @bind-Value=Aviso class="form-control text-center"></InputTextArea>
+		</div>
+
+	</div>
+
+
+</EditForm>
+
+
+@code
+{
+
+	public Animal animal { get; set; } = new();
+
+	public string? temaPrincipal { get; set; } = "Reino Animal";
+
+	public string Mensagem_ { get; set; } = string.Empty;
+
+	public string Aviso { get; set; } = " Desenvolvedor Full Stack!";
+
+	public void Sucesso_Ao_Cadastrar_Animal()
+	{
+		Mensagem_ = $"{animal.nome_Animal}, cadastrado com sucesso!";
+	}
+	public void Falha_Ao_Cadastrar_Animal()
+	{
+		Mensagem_ = "Upps, não foi possível cadastrar o animal!";
+	}
+	public void Sucesso_Ao_Cadastrar_Animal_ (KeyboardEventArgs args)
+	{
+		if (args.Key == "Enter")
+		{
+			Sucesso_Ao_Cadastrar_Animal();
+		}
+	}
+
+}

@@ -1,0 +1,96 @@
+﻿@page "/arvore"
+
+@rendermode InteractiveServer
+
+<style>
+	#botao-cadastrar{
+		/*  display: block;*/
+		/* margin: auto;*/
+		background-color: darkolivegreen;
+	}
+</style>
+
+<h1 class="text-center text-primary">@tema_Principal</h1>
+<hr />
+
+<h2 class="text-secondary">@Mensagem</h2>
+
+	<EditForm Model="arvore" OnValidSubmit="Cadastrar" OnInvalidSubmit="MensagemErro">
+
+		<DataAnnotationsValidator></DataAnnotationsValidator>
+
+		<div id="area-cadastro-arvore">
+
+		<div id="area-um" class="estilo-area-cadastro-arvore">
+
+			<ValidationMessage For="@(()=>arvore.nome_Arvore)"></ValidationMessage>
+			<label class="text-muted">Nome Árvore</label>
+			<InputText typeof="text" @bind-Value="@arvore.nome_Arvore" class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>arvore.nome_Fruto_Arvore)"></ValidationMessage>
+			<label class="text-muted">Nome fruto </label>
+			<InputText typeof="text" @bind-Value=@arvore.nome_Fruto_Arvore class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>arvore.idade_Arvore)"></ValidationMessage>
+			<label class="text-muted">Idade Árvore</label>
+			<InputNumber TValue="int" @bind-Value=@arvore.idade_Arvore class="d-block mb-3 form-control text-center" @onkeypress=Cadastrar_></InputNumber>
+
+			<button id="botao-cadastrar" type="submit" class="btn btn-primary">Cadastrar Árvore</button>
+
+		</div>
+
+		<div id="area-dois" class="estilo-area-cadastro-arvore">
+
+			<ValidationMessage For="@(()=>arvore.nome_Arvore)"></ValidationMessage>
+			<label class="text-muted">Nome Árvore</label>
+			<InputText typeof="text" @bind-Value="@arvore.nome_Arvore" class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>arvore.nome_Fruto_Arvore)"></ValidationMessage>
+			<label class="text-muted">Nome fruto </label>
+			<InputText typeof="text" @bind-Value=@arvore.nome_Fruto_Arvore class="d-block mb-3 form-control text-center"></InputText>
+
+			<ValidationMessage For="@(()=>arvore.idade_Arvore)"></ValidationMessage>
+			<label class="text-muted">Idade Árvore</label>
+			<InputNumber TValue="int" @bind-Value=@arvore.idade_Arvore class="d-block mb-3 form-control text-center" @onkeypress=Cadastrar_></InputNumber>
+			
+			<button id="botao-cadastrar" type="submit" class="btn btn-primary">Cadastrar Árvore</button>
+			
+		</div>
+
+	</div>
+
+	</EditForm>
+
+@{
+	Saudacao();
+}
+
+<div>
+	<h3>@Mensagem</h3>
+</div>
+
+@code
+{
+	public Arvore arvore { get; set; } = new();
+
+	public string tema_Principal { get; set; } = "Mundo das Árvores";
+
+	public string? Mensagem { get; set; }
+
+	public void Cadastrar()
+	{
+		Mensagem = "Árvore cadastrada com Sucesso!";
+	}
+	public void Cadastrar_(KeyboardEventArgs args)
+	{
+		string Resultado = args.Key == "Enter" ? Mensagem = "Árvore cadastrada com Sucesso!" : Mensagem = string.Empty;
+	}
+	public void MensagemErro()
+	{
+		Mensagem = "Não foi possível cadastrar a Árvore";
+	}
+	public void Saudacao()
+	{
+		Mensagem = "Bem vindo ao meu App!";
+	}
+}

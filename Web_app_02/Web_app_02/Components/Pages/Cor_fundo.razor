@@ -1,0 +1,32 @@
+﻿@rendermode InteractiveServer
+
+<style>
+	button{
+		margin-left: 5px;
+		margin-bottom: 5px;
+	}
+</style>
+
+<button type="submit" class="btn btn-primary" @onclick="cor_Fundo">Mudar Cor Fundo</button>
+
+<button class="btn btn-secondary" @onclick="@Mudar_Tema">Mudar Tema</button>
+
+<div>
+	@ChildContent
+</div>
+
+@code
+{
+	[Parameter]
+	public string Cor { get; set; } = string.Empty;
+
+	[Parameter]
+	public EventCallback Mudar_Tema { get; set; }
+
+	[Parameter]
+	public EventCallback cor_Fundo { get; set; }
+
+	[Parameter]
+	public RenderFragment? ChildContent { get; set; }
+
+}

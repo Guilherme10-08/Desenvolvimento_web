@@ -1,0 +1,75 @@
+﻿@inherits LayoutComponentBase
+
+<style>
+	#cabecalho {
+		margin-bottom: -10px;
+	}
+
+	.configuracao-menu {
+		text-decoration: none;
+		padding: 10px;
+	}
+
+		.configuracao-menu:hover {
+			background-color: black;
+			color: white;
+			border-radius: 5px;
+		}
+
+	#rodape > *:nth-child(1):hover {
+		background-color: #fff;
+		border-radius: 5px;
+	}
+
+	#rodape > *:nth-child(2) > li:hover {
+		background-color: #fff;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+</style>
+
+<div class="page">
+
+	@* <div class="sidebar">
+	<NavMenu />
+	</div> *@
+
+	<main>
+
+		<header id="cabecalho" class="text-center bg-black text-primary p-3">
+
+			<h1>Desenvolvimento Web</h1>
+
+		</header>
+
+		<nav class="m-auto text-center p-3 bg-danger">
+			<NavLink class="configuracao-menu" href="/">Início</NavLink>
+			<NavLink class="configuracao-menu" href="reino-animal">Reino Animal</NavLink>
+			<NavLink class="configuracao-menu" href="arvore">Mundo das Árvores</NavLink>
+			<NavLink class="configuracao-menu" href="#">Ajuda</NavLink>
+		</nav>
+
+		<hr />
+
+		<article class="content px-4 h-100">
+			@Body
+		</article>
+
+		<footer id="rodape" class="bg-black p-3">
+			<h3 class="text-center">Dados do Desenvolvedor</h3>
+			<ul>
+				<li>Nome: Guilherme Sebastião</li>
+				<li>Github: www.github.com/Guilherme10-08</li>
+			</ul>
+		</footer>
+
+	</main>
+
+</div>
+
+<div id="blazor-error-ui">
+	An unhandled error has occurred.
+	<a href="" class="reload">Reload</a>
+	<a class="dismiss">🗙</a>
+</div>

@@ -1,0 +1,102 @@
+﻿@inherits LayoutComponentBase
+
+<style>
+	#area-cabecalho{
+		margin-bottom:-15px;
+	}
+	#area-rodape > *:nth-child(2) > li:hover {
+		background-color: black;
+		color: white;
+		border-radius: 5px;
+	}
+
+	#area-rodape {
+		padding: 10px;
+	}
+
+	#dados-desenvolvedor > li {
+		padding: 10px;
+	}
+
+	#link-repositorio-git-hub {
+		text-decoration: none;
+	}
+
+	#titulo-area-dodos-desenvolvedor {
+		margin-left: 10px;
+	}
+
+	#link-menu{
+		padding:10px;
+		text-decoration:none;
+		margin-left: 10px;
+	}
+	#area-menu{
+		padding:5px;
+		margin-left:10px;
+	}
+
+	#area-menu > #link-menu:hover{
+		background-color:black;
+		color:white;
+		border-radius:5px;
+		padding:5px;
+	}
+
+	#titulo-area-dodos-desenvolvedor{
+		border-radius:5px;
+	}
+
+	#area-rodape{
+		width:100%;
+	}
+</style>
+
+<div class="page">
+
+	<main>
+
+		<header id="area-cabecalho">
+
+			@* <h1 class="text-center text-primary p-2">Hello, world... I´m Developer Full-Stack!</h1> *@
+
+			<nav id="area-menu">
+				<NavLink id="link-menu" href="/">Inicio</NavLink>
+				<NavLink id="link-menu" href="home">Area Cadastro</NavLink>
+				<NavLink id="link-menu" href="#">Outros Assuntos</NavLink>
+				<NavLink id="link-menu" href="#">Ajuda</NavLink>
+			</nav>
+
+		</header>
+
+		<hr />
+
+		<seccion id="seccao-inicial">
+
+			<article class="content px-4 h-100">
+				@Body
+			</article>
+
+		</seccion>
+
+		<footer id="area-rodape">
+			<h2 id="titulo-area-dodos-desenvolvedor" class="bg-black p-2 text-secondary text-center">Dados do Desenvolvedor</h2>
+
+			<ul id="dados-desenvolvedor">
+				<li>Nome: Guilherme Sebastião</li>
+				<li>Telefone: 945-562-444</li>
+				<li>E-mail: guilhermesebastiao2023@gmail.com</li>
+				<li>LikedIn: Guilherme Sebastião</li>
+				<li>Github: <a id="link-repositorio-git-hub" href="https://www.github.com/Guilherme10-08" target="_blank" rel="external">www.github.com/Guilherme10-08</a> </li>
+			</ul>
+		</footer>
+	</main>
+
+</div>
+
+
+<div id="blazor-error-ui">
+	An unhandled error has occurred.
+	<a href="" class="reload">Reload</a>
+	<a class="dismiss">🗙</a>
+</div>

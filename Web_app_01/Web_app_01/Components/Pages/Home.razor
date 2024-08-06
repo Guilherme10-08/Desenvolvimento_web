@@ -1,0 +1,104 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+@rendermode InteractiveServer
+
+<style>
+	input{
+		display:block;
+		width:400px;
+		padding:10px;
+		border-radius:5px;
+	}
+	button{
+		display:block;
+	}
+</style>
+
+<seccion>
+	<h1 class="text-primary text-center">@Desenvolvimento.Tema</h1>
+	<hr />
+
+	@foreach (string l in Desenvolvimento.linguagens)
+	{
+		<ul><li>@l</li></ul>
+	}
+</seccion>
+
+<hr />
+
+<seccion>
+	<h2 class="text-secondary">Deseja mudar o tema principal?</h2>
+
+	<label class="mb-2">Digite um novo tema</label>
+
+	<input class="mb-4" @bind="Desenvolvimento.Tema" placeholder="" />
+
+	<button class="btn btn-primary" @onclick="@Desenvolvimento.Mudar_Tema">Adicionar</button>
+</seccion>
+
+<hr />
+
+<seccion>
+	<h2 class="text-secondary">Base de Dados, Modelo Relacional</h2>
+	<p style="text-indent:5px">
+		<strong>Modelo relacional</strong> é um modelo de base de dados que nos permite trabalhar com
+		relacionamento de tabelas, tendo assim a possiblidade de juntar dados de duas ou mais tabelas
+		em uma única consulta.
+	</p>
+
+	<p>Confira a baixo uma lista com alguns <strong>SDGB</strong> relacionais...</p>
+
+	@foreach (var l_sgbd in Desenvolvimento.sgbd)
+	{
+		<ul><li>@l_sgbd</li></ul>
+	}
+
+	<h3 class="text-danger">Exemplo de código Sql, Modelo Relacional </h3>
+
+<pre>
+	<code>
+	SELECT 
+		v.id_venda as 'VENDA',
+		v.nome_produto_venda as 'NOME PRODUTO',
+		v.quantidade_produto_venda as 'QUANTIDADE',
+		v.preco_produto_venda as 'PREÇO',
+		v.total_venda as 'TOTAL',
+		v.data_venda as 'DATA',
+		vd.nome_vendedor as 'NOME VENDEDOR'
+	FROM 
+		venda v
+	INNER JOIN vendedor vd on v.id_venda = vd.id_vendedor;
+	</code>
+</pre>
+</seccion>
+
+
+
+@code
+{
+	public class Desenvolvimento
+	{
+		public static string Tema { get; set; } = "Desenvolvimento Web";
+
+		public static string[] linguagens = new string[3] { "HTML5", "CSS3", "C#" };
+
+		public static string[] sgbd = new string[3] { "MySql", "SqlServer", "Oracle" };
+
+		public static List<string> Lista_sgbd = new List<string>();
+
+		public Desenvolvimento()
+		{
+			Lista_sgbd.Add("MySql");
+			Lista_sgbd.Add("SqlServer");
+			Lista_sgbd.Add("Oracle");
+		}
+
+		public static void Mudar_Tema()
+		{
+			Tema = "Desenvolvedor FullStack";
+		}
+	}
+	
+}

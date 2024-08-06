@@ -1,0 +1,16 @@
+﻿
+body {
+}
+
+.container-cadastro-animal {
+    display: flex;
+}
+
+@media(max-width:800px)
+{
+    .container-cadastro-animal {
+        flex-direction: column;
+    }
+    #area-descricao:{
+    }
+}

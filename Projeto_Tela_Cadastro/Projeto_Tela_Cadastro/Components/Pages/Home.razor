@@ -1,0 +1,79 @@
+﻿@page "/home"
+
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<style>
+	#container-area-cadastro{
+		padding:10px;
+		border-radius:5px;
+		width:90%;
+	}
+
+	#botao-cadastrar{
+		display:block;
+		margin:auto;
+		background-color:darkgreen;
+		color:white;
+		width:30%;
+	}
+</style>
+
+	<h1 class="text-primary text-center">Área Cadastro</h1>
+	<hr />
+
+	<div class="m-auto">
+	<h2 class="text-center">@mensagem_Cadastro</h2>
+	</div>
+	
+
+	<EditForm Model="@cadastro" OnValidSubmit="Sucesso_Cadastro" OnInvalidSubmit="Fracasso_Cadastro">
+
+		<DataAnnotationsValidator></DataAnnotationsValidator>
+
+		<div id="container-area-cadastro" class="bg-black m-auto">
+
+			<ValidationMessage For="@(()=>cadastro.nome_Cadastro)"></ValidationMessage>
+			<label class="text-muted">Nome</label>
+			<InputText typeof="text" @bind-Value=cadastro.nome_Cadastro class="form-control d-block mb-3"></InputText>
+
+			<ValidationMessage For="@(()=>cadastro.area_Formacao_Cadastro)"></ValidationMessage>
+			<label class="text-muted">Area Formação</label>
+			<InputText typeof="text" @bind-Value=cadastro.area_Formacao_Cadastro class="form-control d-block mb-3"></InputText>
+
+			<ValidationMessage For="@(()=>cadastro.tempo_Experiencia_Usuario_Cadastro)"></ValidationMessage>
+			<label class="text-muted">Tempo Experiência</label>
+			<InputNumber TValue="int" @bind-Value=cadastro.tempo_Experiencia_Usuario_Cadastro class="form-control d-block mb-3"></InputNumber>
+
+			<ValidationMessage For="@(()=>cadastro.telefone_Usuario_Cadastro)"></ValidationMessage>
+			<label class="text-muted">Telefone</label>
+			<InputNumber TValue="int" @bind-Value=cadastro.telefone_Usuario_Cadastro class="form-control d-block mb-3"></InputNumber>
+
+			<ValidationMessage For="@(()=>cadastro.email_Usuario_Cadastro)"></ValidationMessage>
+			<label class="text-muted">E-mail</label>
+			<InputText typeof="text" @bind-Value=cadastro.email_Usuario_Cadastro class="form-control d-block mb-3"></InputText>
+
+			<button id="botao-cadastrar" type="submit" class="btn btn-primary">Cadastrar</button>
+
+		</div>
+
+	</EditForm>
+
+@code{
+
+	public Cadastro cadastro { get; set; } = new();
+
+	public string mensagem_Cadastro { get; set; } = string.Empty;
+
+	public void Sucesso_Cadastro()
+	{
+		mensagem_Cadastro = $"{cadastro.nome_Cadastro}...Cadastrado com Sucesso!";
+	}
+	public void Fracasso_Cadastro()
+	{
+		mensagem_Cadastro = "Upps...não foi possível realizar o cadastro!";
+	}
+}
+
+

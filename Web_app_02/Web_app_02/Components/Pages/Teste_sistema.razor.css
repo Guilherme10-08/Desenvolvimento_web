@@ -1,0 +1,53 @@
+﻿
+@charset "UTF-8";
+
+body {
+}
+.estilo-area-cadastro-arvore
+{
+    width: 50%;
+    border-radius: 5px;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#area-cadastro-arvore
+{
+    display: flex;
+}
+
+#area-cadastro-arvore > *:nth-child(1)
+{
+    margin-right: 30px;
+}
+
+#botao-cadastrar {
+  /*  display: block;*/
+   /* margin: auto;*/
+    background-color: darkolivegreen;
+}
+
+@media(max-width:800px)
+{
+    #area-cadastro-arvore
+    {
+        flex-direction:column;
+    }
+    #area-um
+    {
+        width:100%;
+        margin-bottom:30px;
+    }
+    #area-dois
+    {
+        width: 100%;
+    }
+    #botao-cadastrar {
+        margin: auto;
+    }
+   
+    /*#botao-cadastrar {
+        float: right;
+    }*/
+}

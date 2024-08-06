@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_01", "Web_app_01\Web_app_01\Web_app_01.csproj", "{BEA3DB4D-3347-4047-84C7-82893F0133BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_01.Client", "Web_app_01\Web_app_01.Client\Web_app_01.Client.csproj", "{DB670110-3A04-47B9-904A-61D7755230E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_02", "Web_app_02\Web_app_02\Web_app_02.csproj", "{BC505901-9A00-4780-A941-70F24365C0A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_02.Client", "Web_app_02\Web_app_02.Client\Web_app_02.Client.csproj", "{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Tela_Cadastro", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.csproj", "{57BEF863-26D0-48D0-A2AC-977257E94A04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Tela_Cadastro.Client", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.Client\Projeto_Tela_Cadastro.Client.csproj", "{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEA3DB4D-3347-4047-84C7-82893F0133BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA3DB4D-3347-4047-84C7-82893F0133BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA3DB4D-3347-4047-84C7-82893F0133BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA3DB4D-3347-4047-84C7-82893F0133BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB670110-3A04-47B9-904A-61D7755230E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB670110-3A04-47B9-904A-61D7755230E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB670110-3A04-47B9-904A-61D7755230E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB670110-3A04-47B9-904A-61D7755230E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC505901-9A00-4780-A941-70F24365C0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC505901-9A00-4780-A941-70F24365C0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC505901-9A00-4780-A941-70F24365C0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC505901-9A00-4780-A941-70F24365C0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BEF863-26D0-48D0-A2AC-977257E94A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BEF863-26D0-48D0-A2AC-977257E94A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BEF863-26D0-48D0-A2AC-977257E94A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BEF863-26D0-48D0-A2AC-977257E94A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {050F0493-CD6A-433A-91BE-392CEC139F4E}
+	EndGlobalSection
+EndGlobal

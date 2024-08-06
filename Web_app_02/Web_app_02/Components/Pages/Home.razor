@@ -1,0 +1,69 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+@rendermode InteractiveServer
+
+<style>
+	input {
+		display: block;
+		width: 400px;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+	button {
+		display: block;
+	}
+
+	#form-nova-cor
+	{
+		width:50%;
+	}
+</style>
+
+<seccion>
+
+	@* <h1 class="text-primary text-center" style="background-color:@desenvolvimento.Cor">@Desenvolvimento.Tema</h1>
+	<hr /> *@
+
+	@foreach (string l in Desenvolvimento.linguagens)
+	{
+		<ul><li>@l</li></ul>
+	}
+
+</seccion>
+
+<hr />
+
+<div id="cor-fundo">
+
+	<seccion>
+
+		<h2 class="text-secondary"><strong>Deseja mudar o fundo do tema principal?</strong></h2>
+
+		<EditForm Model="desenvolvimento" OnValidSubmit="desenvolvimento.Cor_de_Fundo_2">
+
+			<DataAnnotationsValidator></DataAnnotationsValidator>
+
+			<ValidationMessage For="@(()=>desenvolvimento.Cor)"></ValidationMessage>
+			<label class="text-muted mb-1">Digite uma nova cor de fundo</label>
+			<InputText id="form-nova-cor" class="mb-4 text-center  form-control-color" typeof="text" @bind-Value=desenvolvimento.Cor></InputText>
+
+			<Cor_fundo Cor="@desenvolvimento.Cor" Mudar_Tema="Desenvolvimento.Mudar_Tema" cor_Fundo="desenvolvimento.Cor_de_Fundo_2"></Cor_fundo>
+
+		</EditForm>
+
+	</seccion>
+
+</div>
+
+<hr />
+
+<Principal Titulo="Base de Dados, Modelo Relacional"></Principal>
+
+@code
+{
+	public Desenvolvimento desenvolvimento { get; set; } = new();
+
+}
