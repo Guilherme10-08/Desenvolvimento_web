@@ -74,6 +74,34 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+
+}
+@media(max-width:600px){
+    #area-menu {
+        flex-direction: column;
+        padding: 5px;
+    }
+    #area-cabecalho{
+        flex-direction:column-reverse;
+    }
+    #secccao-logo {
+        margin-left: 17px;
+        margin-bottom: 20px;
+    }
+    #area-menu {
+        margin-left: 17px;
+        width: 93%;
+    }
+    #area-rodape{
+        margin-left:22px;
+        width:91%;
+    }
+}
+@media(max-width:520px) {
+    #area-menu {
+        flex-direction:column;
+        padding: 5px;
+    }
 }
 
 #blazor-error-ui {

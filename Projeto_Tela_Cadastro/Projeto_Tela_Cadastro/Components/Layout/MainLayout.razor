@@ -3,15 +3,40 @@
 <style>
 	#area-cabecalho{
 		margin-bottom:-15px;
+		 padding:5px; 
+	}
+
+	#link-menu {
+		padding: 5px;
+		text-decoration: none;
+		margin-left: 10px;
+	}
+
+	#area-menu {
+		border:1px solid red;
+		padding: 10px;
+		margin-left: 25px;
+		margin-right: 20px;
+		width: 99%;
+	}
+
+	#area-menu > #link-menu:hover {
+		background-color: black;
+		color: white;
+		border-radius: 5px;
+	}
+	#area-rodape {
+		margin:auto;
+		margin-right: 26px;
+		margin-bottom: 20px;
+		width:95%;
+		padding: 10px;
+		border: 1px solid red;
 	}
 	#area-rodape > *:nth-child(2) > li:hover {
 		background-color: black;
 		color: white;
 		border-radius: 5px;
-	}
-
-	#area-rodape {
-		padding: 10px;
 	}
 
 	#dados-desenvolvedor > li {
@@ -22,65 +47,66 @@
 		text-decoration: none;
 	}
 
-	#titulo-area-dodos-desenvolvedor {
-		margin-left: 10px;
-	}
-
-	#link-menu{
-		padding:10px;
-		text-decoration:none;
-		margin-left: 10px;
-	}
-	#area-menu{
-		padding:5px;
-		margin-left:10px;
-	}
-
-	#area-menu > #link-menu:hover{
-		background-color:black;
-		color:white;
-		border-radius:5px;
-		padding:5px;
-	}
-
 	#titulo-area-dodos-desenvolvedor{
+		margin:auto;
+		margin-bottom:20px;
+		color:white;
+		font-size:14px;
 		border-radius:5px;
+		text-align:center;
+		padding:5px;
 	}
 
-	#area-rodape{
-		width:100%;
+	#titulo-area-dodos-desenvolvedor:hover{
+		color:cadetblue;
+		font-weight:900;
 	}
+	#dados-desenvolvedor{
+		font-size:12px;
+	}
+
+	#secccao-logo{
+		width:40%;
+		border:1px solid red;
+		padding:10px;
+		margin-right: 20px;
+	}
+
 </style>
 
 <div class="page">
 
-	<main>
+	<main class="m-auto">
 
-		<header id="area-cabecalho">
-
-			@* <h1 class="text-center text-primary p-2">Hello, world... I´m Developer Full-Stack!</h1> *@
+		<header id="area-cabecalho" class="m-auto d-flex">
 
 			<nav id="area-menu">
 				<NavLink id="link-menu" href="/">Inicio</NavLink>
 				<NavLink id="link-menu" href="home">Area Cadastro</NavLink>
-				<NavLink id="link-menu" href="#">Outros Assuntos</NavLink>
-				<NavLink id="link-menu" href="#">Ajuda</NavLink>
+				<NavLink id="link-menu" href="outrosassuntos">Outros Assuntos</NavLink>
+				<NavLink id="link-menu" href="sobre">Sobre</NavLink>
 			</nav>
+
+			<section id="secccao-logo">
+				<div>
+					<h1>Logotipo</h1>
+				</div>
+			</section>
 
 		</header>
 
 		<hr />
 
-		<seccion id="seccao-inicial">
+		<section id="seccao-inicial" class="m-auto">
 
 			<article class="content px-4 h-100">
 				@Body
 			</article>
 
-		</seccion>
+		</section>
 
-		<footer id="area-rodape">
-			<h2 id="titulo-area-dodos-desenvolvedor" class="bg-black p-2 text-secondary text-center">Dados do Desenvolvedor</h2>
+		<div id="area-rodape">
+			<h2 id="titulo-area-dodos-desenvolvedor" class="bg-black">Dados do Desenvolvedor</h2>
 
 			<ul id="dados-desenvolvedor">
 				<li>Nome: Guilherme Sebastião</li>
@@ -89,7 +115,7 @@
 				<li>LikedIn: Guilherme Sebastião</li>
 				<li>Github: <a id="link-repositorio-git-hub" href="https://www.github.com/Guilherme10-08" target="_blank" rel="external">www.github.com/Guilherme10-08</a> </li>
 			</ul>
-		</footer>
+		</div>
 	</main>
 
 </div>

@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_02", "Web_app_02\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_app_02.Client", "Web_app_02\Web_app_02.Client\Web_app_02.Client.csproj", "{FD824872-9E4F-429E-82B1-E7ADB9AC73ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Tela_Cadastro", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.csproj", "{57BEF863-26D0-48D0-A2AC-977257E94A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto_Tela_Cadastro", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.csproj", "{57BEF863-26D0-48D0-A2AC-977257E94A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto_Tela_Cadastro.Client", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.Client\Projeto_Tela_Cadastro.Client.csproj", "{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto_Tela_Cadastro.Client", "Projeto_Tela_Cadastro\Projeto_Tela_Cadastro.Client\Projeto_Tela_Cadastro.Client.csproj", "{1EA7312C-7714-4E11-9AEA-5848BC7EBBB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

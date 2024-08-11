@@ -8,7 +8,13 @@
 	#container-area-cadastro{
 		padding:10px;
 		border-radius:5px;
-		width:90%;
+		width:100%;
+	}
+
+	#area-cadastro{
+		border:1px solid red;
+		margin-bottom:20px;
+		padding:5px;
 	}
 
 	#botao-cadastrar{
@@ -20,15 +26,11 @@
 	}
 </style>
 
-	<h1 class="text-primary text-center">Área Cadastro</h1>
-	<hr />
-
-	<div class="m-auto">
-	<h2 class="text-center">@mensagem_Cadastro</h2>
-	</div>
+	<TituloPrincipal tituloPrincipal="Área Cadastro"></TituloPrincipal>
 	
+	<h2 class="text-secondary text-center">@mensagem_Cadastro</h2>
 
-	<EditForm Model="@cadastro" OnValidSubmit="Sucesso_Cadastro" OnInvalidSubmit="Fracasso_Cadastro">
+	<EditForm Model="@cadastro" OnValidSubmit="Sucesso_Cadastro" OnInvalidSubmit="Fracasso_Cadastro" id="area-cadastro">
 
 		<DataAnnotationsValidator></DataAnnotationsValidator>
 
@@ -74,6 +76,12 @@
 	{
 		mensagem_Cadastro = "Upps...não foi possível realizar o cadastro!";
 	}
+
+	// protected override void OnInitialized()
+	// {
+	// 	mensagem_Cadastro = "Aguadando...";
+	// }
+
 }
 
 

@@ -1,0 +1,11 @@
+﻿@rendermode InteractiveServer
+
+<h1 class="text-primary text-center">@tituloPrincipal</h1>
+
+@code
+{
+	[EditorRequired]
+	[Parameter]
+	public string tituloPrincipal { get; set; } = string.Empty;
+
+}

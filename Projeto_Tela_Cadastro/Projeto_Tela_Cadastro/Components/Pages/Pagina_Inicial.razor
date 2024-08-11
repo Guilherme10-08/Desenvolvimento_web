@@ -1,7 +1,74 @@
 ﻿@page "/"
 
-<h1>Pagina_Inicial</h1>
+@rendermode InteractiveServer
 
-@code {
+<style>
+	#area-imagem-principal {
+		margin:auto;
+		width:100%;
+		border:1px solid blue;
+		padding:10px;
+		margin-bottom:20px;
+	}
+	img {
+		width: 100%;
+	}
+
+	#contaner-principal, #seccao-secundaria {
+		margin: auto;
+		margin-bottom: 25px;
+		display:flex;
+		padding:10px;
+		width:100%;
+		border:1px solid red;
+	}
+
+	#area-um, #area-tres {
+		border:1px solid blue;
+		margin-right:25px;
+		padding:10px;
+		width: 50%;
+	}
+	#area-dois,#area-quatro{
+		border: 1px solid blue;
+		padding:10px;
+		width:50%;
+	}
+
+</style>
+
+<div id="area-imagem-principal">
+
+	 <img src="sft_01.jpg" alt="imagem-principal-da-aplicação" /> 
+
+</div>
+
+<div id="contaner-principal" class="d-flex">
+
+	<div id="area-um">
+		<h1>Primeiro</h1>
+	</div>
+
+	<div id="area-dois"> 
+		<h1>Segundo</h1>
+	</div>
+
+</div>
+
+<section id="seccao-secundaria" class="d-flex">
+
+	<div id="area-tres">
+		<h1>Terceiro</h1>
+	</div>
+
+	<div id="area-quatro">
+		<h1>Quatro</h1>
+	</div>
+
+</section>
+
+
+@code
+{
 
 }
